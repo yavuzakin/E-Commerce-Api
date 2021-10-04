@@ -25,6 +25,6 @@ app.use('/api/orders', orderRoute);
 app.use('/api/carts', cartRoute);
 app.use('/api/auth', authRoute);
 
-app.listen(process.env.PORT || 5000, () => {
+app.listen(process.env.PORT, () => {
     console.log(`Listening port number ${process.env.PORT}`);
 })
