@@ -7,6 +7,7 @@ const productRoute = require('./routes/products');
 const orderRoute = require('./routes/orders');
 const cartRoute = require('./routes/carts');
 const authRoute = require('./routes/auth');
+const stripeRoute = require('./routes/stripe');
 
 // To be able to use dotenv file
 dotenv.config();
@@ -24,6 +25,7 @@ app.use('/api/products', productRoute);
 app.use('/api/orders', orderRoute);
 app.use('/api/carts', cartRoute);
 app.use('/api/auth', authRoute);
+app.use('/api/checkout', stripeRoute);
 
 app.listen(process.env.PORT, () => {
     console.log(`Listening port number ${process.env.PORT}`);
